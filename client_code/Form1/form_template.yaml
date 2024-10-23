@@ -1,33 +1,33 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {background: 'theme:Gray 100'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: image_1
+- components:
+  - layout_properties: {grid_position: 'MAMBAX,SGMHMV'}
+    name: image_1
     properties: {background: '#c8c8c8'}
     type: Image
-    layout_properties: {grid_position: 'MAMBAX,SGMHMV'}
-  - name: choose_change
+  - event_bindings: {change: coin_choice_dropdown_change}
+    layout_properties: {grid_position: 'GJNDHD,HJVZOQ'}
+    name: choose_change
     properties:
       items: [Heads, Tails]
     type: DropDown
-    layout_properties: {grid_position: 'GJNDHD,HJVZOQ'}
-    event_bindings: {change: coin_choice_dropdown_change}
-  - name: button_1
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'QIPLIG,TGPREV'}
+    name: button_1
     properties: {text: Flip..!}
     type: Button
-    layout_properties: {grid_position: 'QIPLIG,TGPREV'}
-    event_bindings: {click: button_1_click}
-- type: FlowPanel
-  properties: {}
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {background: 'theme:Gray 100'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: label_1
-  properties: {bold: true, text: Coin Flip}
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: center, bold: true, text: Coin Flip}
   type: Label
-  layout_properties: {slot: title}
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

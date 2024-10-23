@@ -1,11 +1,10 @@
 allow_embedding: false
-package_name: COIN_FLIP_GAME
+metadata: {description: PLAY AND WIN, logo_img: 'asset:download.jpg', title: COIN FLIP}
 name: COIN FLIP GAME
-startup_form: Form1
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
-metadata: {title: COIN FLIP, description: PLAY AND WIN, logo_img: 'asset:download.jpg'}
+package_name: COIN_FLIP_GAME
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
 services:
-- source: /runtime/services/tables.yml
-  client_config: {}
+- client_config: {}
   server_config: {}
+  source: /runtime/services/tables.yml
+startup_form: Form1
